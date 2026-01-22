@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/main.css">
+  <title>Find Coordinates</title>
+ 
+</head>
+
+<body>
+<div class="container">
+   <section id="cards" class="cards">
+
+    <%if (locals.data) {%>
+
+      <article class="card-item">
+        <h3>Earthquakes in Specified Date Range and Radius:</h3><br>
+        <ol>
+          <li> <% data.response.forEach(resp => { %></li>
+            <li>
+              <p><strong>Location: </strong><%=resp.report.location %></p>
+              <p><strong>Magnitude: </strong><%=resp.report.mag%></p>
+              <p><strong>Type: </strong><%=resp.report.type%></p>
+              <p><strong>Date: </strong><%=resp.report.dateTimeISO%></p>      
+            </li>
+          <% }) %>
+          </ol>
+          
+      <%} else {%>
+        <h4 class="card-activity">No earthquakes in given time period and range.</h4>
+        <p>Try expanding the time period (up to one year) <br>or increasing the range (Maximum Distance)</p>
+      <%}%>
+      
+    </article>
+
+     <%if (locals.error) {%>                     <!--creates div to show errors-->
+        <div id="tag-error" class="tag-error">
+              <%=error%>
+        </div>
+      <%}%>
+
+   </section>
+</div>
+</body>
+
+</html>

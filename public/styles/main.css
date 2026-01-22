@@ -1,0 +1,200 @@
+/* ------------ */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+/* ------------ */
+body {
+  font-family: monospace;
+  height: 100%;
+  background-image:url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='82' patternTransform='scale(3) rotate(180)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(206,71.4%,64.3%,1)'/><path d='M-4.798 13.573C-3.149 12.533-1.446 11.306 0 10c2.812-2.758 6.18-4.974 10-5 4.183.336 7.193 2.456 10 5 2.86 2.687 6.216 4.952 10 5 4.185-.315 7.35-2.48 10-5 1.452-1.386 3.107-3.085 4.793-4.176'  stroke-width='1' stroke='hsla(207,42.9%,28.8%,1)' fill='none'/><path d='M-4.798 33.573C-3.149 32.533-1.446 31.306 0 30c2.812-2.758 6.18-4.974 10-5 4.183.336 7.193 2.456 10 5 2.86 2.687 6.216 4.952 10 5 4.185-.315 7.35-2.48 10-5 1.452-1.386 3.107-3.085 4.793-4.176'  stroke-width='1' stroke='hsla(208,45.5%,93.5%,1)' fill='none'/><path d='M-4.798 53.573C-3.149 52.533-1.446 51.306 0 50c2.812-2.758 6.18-4.974 10-5 4.183.336 7.193 2.456 10 5 2.86 2.687 6.216 4.952 10 5 4.185-.315 7.35-2.48 10-5 1.452-1.386 3.107-3.085 4.793-4.176'  stroke-width='1' stroke='hsla(207,49.1%,78.4%,1)' fill='none'/><path d='M-4.798 73.573C-3.149 72.533-1.446 71.306 0 70c2.812-2.758 6.18-4.974 10-5 4.183.336 7.193 2.456 10 5 2.86 2.687 6.216 4.952 10 5 4.185-.315 7.35-2.48 10-5 1.452-1.386 3.107-3.085 4.793-4.176'  stroke-width='1' stroke='hsla(206,41.2%,50%,1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(-132,-462)' fill='url(%23a)'/></svg>")
+}
+h1 {
+  width: 100%;
+  margin-bottom: 30px;
+  margin-top: 50px;
+  font-size: 2rem;
+  color:aliceblue;
+}
+
+h3 {
+  margin-top: 10px;
+}
+
+ol {
+  
+  padding: 10px;
+  margin-left: 40px;
+}
+
+ol li {
+  padding: 5px;
+}
+
+/* ------------ */
+.container {
+  
+  width: 100%;
+  max-width: 570px;
+  margin: 20px auto;
+  padding: 10px 10px 20px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* ------------ */
+
+input, textarea, select, button {
+  font-family: inherit;
+  font-size: 1rem;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #0077cc;
+  box-shadow: 0 0 5px rgba(0, 119, 204, 0.3);
+}
+
+::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+label {
+  font-size: 1rem;
+}
+
+.button1 {
+  background: green;
+  border: none;
+  color: #fff;
+  padding: 10px 16px;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button2 {
+  background: darkblue;
+  border: none;
+  color: #fff;
+  padding: 10px 16px;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #005fa3;
+}
+
+select {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 1rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Creates two equal-width columns */
+  gap: 20px; /* Adds space between grid items */
+}
+
+.form-group label {
+  display: block; /* Ensures labels are above inputs within the group */
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%; /* Makes inputs fill their column */
+  padding: 8px;
+  box-sizing: border-box; /* Ensures padding doesn't add to the width */
+}
+
+.full-span {
+  grid-column: span 2; /* Makes an element span across both columns */
+}
+
+button {
+  grid-column: span 2; /* Centers the button or makes it span the width */
+}
+
+/***********************************/
+.form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 80px;
+  grid-column-gap: 10px;
+}
+
+.cards {
+  display: flex;
+  margin: 20px 0;
+  width: 100%;
+  
+}
+.card-item {
+  width: 100%;
+  padding: 5px 20px 20px;
+  border: 1px solid rgb(232, 232, 232);
+  background-color: lightgreen;
+  border-radius: 5px;
+}
+.card-info {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.card-activity {
+  line-height: 1.2;
+  margin-top: 10px;
+  background-color: lightgreen;
+  padding: 5px 20px 20px;
+}
+.tag-error {
+  width: 100%;
+  text-align: center;
+}
+/* ------------ */
+.is-element-hidden {
+  display: none;
+}
+/* ------------ */
+@media (max-width: 620px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 60px 20px;
+  }
+  .form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+}
